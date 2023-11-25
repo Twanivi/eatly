@@ -109,6 +109,7 @@ body{
                     border-radius: 18px;
                     border-style: none;
                     transition: 0.5s;
+                    margin-right: 9px;
 
                     @include font-style(#606060, 18px, 700, 27px);
 
@@ -218,6 +219,44 @@ body{
 
                 .hero__img{
                     transform: translateX(36px);
+                }
+            }
+        }
+
+        .experience{
+            padding: 57px 0 55px;
+            background-image: url("../assets/images/back-experience.jpg");
+            background-size: cover;
+
+            .experience__wrapper{
+                display: flex;
+                justify-content: center;
+                column-gap: 66px;
+
+                .experience__card{
+                    width: 264px;
+                    border-right: 1px solid rgba(196, 196, 196, 0.15);
+ 
+
+                    .experience__number{
+                        font-family: $font-fifth;
+                        text-align: center;
+                        padding-right: 66px;
+
+                        @include font-style(#FFF, 43px, 700, 54px);
+                    }
+
+                    .experience__info{
+                        font-family: $font-secondary;
+                        text-align: center;
+                        padding-right: 66px;
+
+                        @include font-style(#C5BFED, 14px, 500, 22px);
+                    }
+
+                    &:last-child{
+                        border-right: none;
+                    }
                 }
             }
         }
