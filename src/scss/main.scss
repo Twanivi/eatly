@@ -20,6 +20,11 @@ $color-primary: #6C5FBC;
     box-sizing: border-box;
 }
 
+.container{
+    max-width: 1262px;
+    margin: 0 auto;
+}
+
 body{
     font-family: $font-primary;
     background-color: #F9F9F9;
@@ -28,14 +33,13 @@ body{
         text-decoration: none;
     }
 
-    .container{
-        max-width: 1262px;
-        margin:auto
-    }
+    
 
     header{
-        display: flex;
-        justify-content: space-between;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
 
         nav,
         nav li,
@@ -47,25 +51,24 @@ body{
             padding: 48px 0 25px;
             display: flex;
             justify-content: space-between;
-            align-items: baseline;
+            align-items: center;
             border-bottom: #CBCBCB 1px solid;
 
             .header-logo-nav{
                 display: flex;
                 justify-content: space-between;
-                align-items: baseline;
+                align-items:center;
+                width: 50%;
 
                 .header-logo{
                     display: flex;
                     justify-content: space-between;
-                    align-items: baseline;
+                    align-items: center;
 
                     .name-logo{
-                        a{
-                            margin-left: 11px;
-            
-                            @include font-style($color-primary, 21px, 600, 28px);
-                        }
+                        margin-left: 11px;
+                        
+                        @include font-style($color-primary, 21px, 600, 28px);
                     }
                 }
 
@@ -73,7 +76,8 @@ body{
                     nav ul{
                     display: flex;
                     justify-content: space-between;
-                    align-items: baseline;
+                    align-items: center;
+                    gap: 54px;
 
                         li{
                             list-style-type: none;
@@ -99,6 +103,7 @@ body{
                     padding: 18px 27px;
                     background-color: #F9F9F9;
                     border-style: none;
+                    transition: 0.7s;
 
                     @include font-style(#606060, 18px, 700, 27px);
 
@@ -106,9 +111,16 @@ body{
                         background-color: $color-primary;
                         border-radius: 18px;
                         color: #F9F9F9;
+                        transition: 0.7s;
                     }
                 }
             }
+        }
+    }
+
+    main{
+        .hero{
+            padding: 184px 0 85px;
         }
     }
 }
