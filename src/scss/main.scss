@@ -33,6 +33,10 @@ body{
         text-decoration: none;
     }
 
+    .color{
+        color: $color-primary;
+    }
+
     
 
     header{
@@ -122,15 +126,98 @@ body{
     main{
         .hero{
             padding: 184px 0 85px;
+            .container{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
 
-            &__title{
-                &__tittle-comment{
-                    font-family: $font-primary;
-                    letter-spacing: 2px;
+                .hero__tittle{
+                    padding: 70px 0 46px;
+              
+                    .hero__tittle-comment{
+                        font-family: $font-primary;
+                        letter-spacing: 2px;
 
-                    @include font-style(rgba(32, 31, 31, 0.20), 15px, 600, 18px);
+                        @include font-style(rgba(32, 31, 31, 0.20), 15px, 600, 18px);
 
-                    
+                        &::before{
+                            content: "";
+                            display: inline-block;
+                            vertical-align: middle;
+                            width: 54px;
+                            height: 1px;
+                            background-color: #201F1F;
+                            opacity: 0.2;
+                            margin-right: 10px;
+                        }
+                    }
+
+                    h1{
+                        font-family: $font-primary;
+                        letter-spacing: -3px;
+                        width: 567px;
+                        margin: 18px 0 16px;
+                        
+                        @include font-style(#201F1F, 75px, 600, 90px);
+                    }
+
+                    .hero__info{
+                        margin-bottom: 53px;
+                        font-family: $font-secondary;
+                        width: 499px;
+                        opacity: 0.7;
+
+                        @include font-style(#676767, 18px, 400, 28px);
+                    }
+
+                    .hero__buttons{
+                        margin-bottom: 33px;
+
+                        button{
+                            font-family: $font-primary;
+                            padding: 18px 31px;
+                            background-color: #F9F9F9;
+                            border: none;
+                            border-radius: 12px;
+                            transition: 0.5s;
+                            outline: 1px solid $color-primary;
+                            margin-right: 18px;
+
+                            @include font-style($color-primary, 16px, 500);
+
+                            &:hover{
+                                background-color: $color-primary;
+                                
+                                color: #F9F9F9;
+                                transition: 0.5s;
+                            }
+                        }
+                    }
+
+                    .hero__feedback{
+                        display: flex;
+                        align-items: last baseline;
+
+                        .hero__feedback-name{
+                            margin-right: 20px;
+                            
+                            .icon-name{
+                                transform: translateY(4px);
+                            }
+                        }
+
+                        .hero__feedback-users{
+                            font-family: $font-forth;
+                            opacity: 0.7;
+                            margin-left: 9px;
+
+                            @include font-style(#334155, 16px, 500, 24px);
+                        }
+                    }
+                }
+
+                .hero__img{
+                    transform: translateX(36px);
                 }
             }
         }
