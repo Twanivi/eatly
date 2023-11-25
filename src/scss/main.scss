@@ -23,6 +23,10 @@ $color-primary: #6C5FBC;
 body{
     font-family: $font-primary;
     background-color: #F9F9F9;
+
+    a{
+        text-decoration: none;
+    }
 }
 
 .container{
@@ -34,18 +38,31 @@ header{
     display: flex;
     justify-content: space-between;
 
+    nav,
+    nav li,
+    button {
+        display: inline-block;
+    }
+
     .container{
+        padding: 48px 0 25px;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
 
         .header-logo-nav{
             display: flex;
             justify-content: space-between;
+            align-items: baseline;
 
             .header-logo{
                 display: flex;
                 justify-content: space-between;
+                align-items: baseline;
 
                 .name-logo{
                     a{
+                        margin-left: 11px;
                         text-decoration: none;
         
                         @include font-style($color-primary, 21px, 600, 28px);
@@ -53,19 +70,22 @@ header{
                 }
             }
 
-            .header-nav nav ul{
+            .header-nav {
+                nav ul{
                 display: flex;
                 justify-content: space-between;
+                align-items: baseline;
 
-                li{
-                    list-style-type: none;
-                    display: flex;
-                    justify-content: space-between;
+                    li{
+                        list-style-type: none;
+                        display: flex;
+                        justify-content: space-between;
 
-                    a{
-                        text-decoration: none;
+                        a{
+                            text-decoration: none;
 
-                        @include font-style(#606060, 18px, 500, 27px);
+                            @include font-style(#606060, 18px, 500, 27px);
+                        }
                     }
                 }
             }
@@ -74,11 +94,16 @@ header{
         .header-buttons{
             display: flex;
             justify-content: space-between;
+            align-items: center;
 
             button{
                 font-family: $font-secondary;
                 padding: 18px 27px;
+                background-color: #F9F9F9;
+                border-style: none;
+
                 @include font-style(#606060, 18px, 700, 27px);
+
                 &:hover{
                     background-color: $color-primary;
                     border-radius: 18px;
