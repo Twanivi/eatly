@@ -1,7 +1,28 @@
+$font-primary: 'Poppins', sans-serif;
+$font-secondary: 'Inter', sans-serif;
+$font-third: 'Manrope', sans-serif;
+$font-forth: 'Plus Jakarta Sans', sans-serif;
+$font-fifth: 'Public Sans', sans-serif;
+$font-sixth: 'Quicksand', sans-serif;
+
+$color-primary: #6C5FBC;
+
+@mixin font-style($color, $size, $weight, $lheight: auto) {
+    color: $color;
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $lheight;
+  }
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body{
+    font-family: $font-primary;
+    background-color: #F9F9F9;
 }
 
 .container{
@@ -12,5 +33,58 @@
 header{
     display: flex;
     justify-content: space-between;
-    
+
+    .container{
+
+        .header-logo-nav{
+            display: flex;
+            justify-content: space-between;
+
+            .header-logo{
+                display: flex;
+                justify-content: space-between;
+
+                .name-logo{
+                    a{
+                        text-decoration: none;
+        
+                        @include font-style($color-primary, 21px, 600, 28px);
+                    }
+                }
+            }
+
+            .header-nav nav ul{
+                display: flex;
+                justify-content: space-between;
+
+                li{
+                    list-style-type: none;
+                    display: flex;
+                    justify-content: space-between;
+
+                    a{
+                        text-decoration: none;
+
+                        @include font-style(#606060, 18px, 500, 27px);
+                    }
+                }
+            }
+        }
+
+        .header-buttons{
+            display: flex;
+            justify-content: space-between;
+
+            button{
+                font-family: $font-secondary;
+                padding: 18px 27px;
+                @include font-style(#606060, 18px, 700, 27px);
+                &:hover{
+                    background-color: $color-primary;
+                    border-radius: 18px;
+                    color: #F9F9F9;
+                }
+            }
+        }
+    }
 }
