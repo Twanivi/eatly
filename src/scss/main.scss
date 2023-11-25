@@ -49,6 +49,7 @@ header{
         display: flex;
         justify-content: space-between;
         align-items: baseline;
+        border-bottom: #CBCBCB 1px solid;
 
         .header-logo-nav{
             display: flex;
@@ -63,7 +64,6 @@ header{
                 .name-logo{
                     a{
                         margin-left: 11px;
-                        text-decoration: none;
         
                         @include font-style($color-primary, 21px, 600, 28px);
                     }
@@ -82,7 +82,6 @@ header{
                         justify-content: space-between;
 
                         a{
-                            text-decoration: none;
 
                             @include font-style(#606060, 18px, 500, 27px);
                         }
