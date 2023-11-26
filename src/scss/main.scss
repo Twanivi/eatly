@@ -296,9 +296,9 @@ body{
                     text-align: center;
                     background-color: $color-primary;
                     background-image: url("../assets/icons/arrow-right.svg");
-                    background-size: 17px;
+                    background-size: 27px;
                     background-repeat: no-repeat;
-                    background-position: 95%;
+                    background-position: 80%;
                     border-radius: 12px;
 
                     @include font-style(#FFF, 18px, 500, 23px);
@@ -310,6 +310,115 @@ body{
                     transform: translate(-20px, 80px);
                    }
                 }
+            }
+        }
+
+        .restaurants{
+            .container{
+                padding: 100px 0 120px;
+                border-top: 1px solid #CBCBCB;
+                border-bottom: 1px solid #CBCBCB;
+
+                h3{
+                    font-family: $font-primary;
+                    text-align: center;
+                    margin-bottom: 86px;
+
+                    @include font-style(#323142, 45px, 600, 26px);
+                }
+
+                .restaurants__wrapper{
+                    display: flex;
+                    justify-content: space-between;
+
+                    .restaurants__card{
+                        border-radius: 30px;
+                        border: 1px solid #F4F4F6;
+                        background-color: #FFF;
+                        box-shadow: 6px 71px 36px 0 rgba(229, 229, 229, 0.70);
+
+
+                        .restaurants__img{
+                            img{
+                                border-radius: 30px 30px 0 0;
+                            }
+                        }
+
+                        .restaurants__info{
+                            margin: 0 27px 0 33px;
+
+                            .restaurants__mark{
+                                font-style: $font-primary;
+                                width: 66px;
+                                border-radius: 5px;
+                                background-color: #F7EDD0;
+                                text-align: center;
+
+                                @include font-style(#DAA31A, 13px, 400);
+                            }
+
+                            .restaurants__mark2{
+                                font-style: $font-primary;
+                                width: 66px;
+                                border-radius: 5px;
+                                background-color: #F7C5BA;
+                                text-align: center;
+
+                                @include font-style(#FB471D, 13px, 400);
+                            }
+
+                            .restaurants__name{
+                                font-style: $font-primary;
+
+                                @include font-style(#323142, 26px, 600, 42px);
+                            }
+
+                            .restaurants__feedback-pop{
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+
+                                .restaurants__feedback{
+                                    display: flex;
+                                    justify-content: space-between;
+                                    .restaurants__time, .restaurants__popular{
+                                        font-family: $font-third;
+
+                                        @include font-style(#8E97A6, 19px, 400, 26px);
+                                    }
+
+                                }
+
+                                .restaurants__bookmark{
+                                    img{
+                                        cursor: pointer;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .restaurants__view{
+                    display: block;
+                    margin-top: 66px;
+                    padding-right: 47px;
+                    text-align: end;
+                    font-family: $font-primary;
+                    letter-spacing: -0.1px;
+                    background-image: url("../assets/icons/arrow-right-gray.svg");
+                    background-size: 27px;
+                    background-repeat: no-repeat;
+                    background-position: 100%;
+
+                    @include font-style(#ACADB9, 20px, 500, 45px);
+                }
+            }
+        }
+
+        .dishes{
+            .container{
+
             }
         }
     }
