@@ -381,6 +381,7 @@ body{
                                 .restaurants__feedback{
                                     display: flex;
                                     justify-content: space-between;
+
                                     .restaurants__time, .restaurants__popular{
                                         font-family: $font-third;
 
@@ -418,7 +419,124 @@ body{
 
         .dishes{
             .container{
+                padding: 100px 0 120px;
 
+                h3{
+                    font-family: $font-primary;
+                    text-align: center;
+                    margin-bottom: 76px;
+
+                    @include font-style(#323142, 45px, 600, 26px);
+                }
+
+                .dishes__wrapper{
+                    display: flex;
+                    justify-content: space-between;
+
+                    .dishes__card{
+                        max-width: 225px;
+                        padding: 26px 0 30px ;
+                        border-radius: 36px;
+                        border: 1px solid #F4F4F6;
+                        background-color: #FFF;
+                        box-shadow: 7px 82px 41px 0 rgba(229, 229, 229, 0.70);
+                        position: relative;
+                        display: flex;
+                        justify-content: space-between;
+                        flex-direction: column;
+
+                        .dishes__heart{
+                            position: absolute;
+                            cursor: pointer;
+                            right: 20px;
+                            top: 20px;
+                        }
+
+                        .dishes__info{
+                            padding: 0 23px;
+
+                            .dishes__mark{
+                                font-style: $font-primary;
+                                width: 66px;
+                                border-radius: 5px;
+                                background-color: #F7EDD0;
+                                text-align: center;
+
+                                @include font-style(#DAA31A, 11px, 400);
+                            }
+
+                            .dishes__mark2{
+                                font-style: $font-primary;
+                                width: 66px;
+                                border-radius: 5px;
+                                background-color: #F7C5BA;
+                                text-align: center;
+
+                                @include font-style(#FB471D, 11px, 400);
+                            }
+
+                            .dishes__mark3{
+                                font-style: $font-primary;
+                                width: 66px;
+                                border-radius: 5px;
+                                background-color: rgba(51, 173, 100, 0.2);
+                                text-align: center;
+
+                                @include font-style(#309D5B, 11px, 400);
+                            }
+
+                            .dishes__name{
+                                font-style: $font-primary;
+
+                                @include font-style(#323142, 23px, 600, 37px);
+                            }
+
+                            .dishes__time-pop{
+                                display: flex;
+                                justify-content: flex-start;
+
+                                .dishes__time, .dishes__popular{
+                                    font-family: $font-third;
+
+                                    @include font-style(#8E97A6, 17px, 400, 23px);
+                                }
+                            }
+
+                            .dishes__price-add{
+                                display: flex;
+                                justify-content: space-between;
+
+                                .dishes__price{
+                                    font-family: $font-third;
+
+                                    @include font-style(#323142, 26px, 700, 40px);
+
+                                    .price{
+                                        font-family: $font-third;
+
+                                        @include font-style(#8E97A6, 19px, 700, 40px);
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+                }
+
+                .dishes__view{
+                    display: block;
+                    margin-top: 66px;
+                    padding-right: 47px;
+                    text-align: end;
+                    font-family: $font-primary;
+                    letter-spacing: -0.1px;
+                    background-image: url("../assets/icons/arrow-right-gray.svg");
+                    background-size: 27px;
+                    background-repeat: no-repeat;
+                    background-position: 100%;
+
+                    @include font-style(#ACADB9, 20px, 500, 45px);
+                }
             }
         }
     }
