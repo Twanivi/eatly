@@ -31,10 +31,15 @@ body{
 
     a{
         text-decoration: none;
+        cursor: pointer;
     }
 
     .color{
         color: $color-primary;
+    }
+
+    button{
+        cursor: pointer;
     }
 
     
@@ -145,7 +150,7 @@ body{
                             content: "";
                             display: inline-block;
                             vertical-align: middle;
-                            width: 54px;
+                            max-width: 54px;
                             height: 1px;
                             background-color: #201F1F;
                             opacity: 0.2;
@@ -156,7 +161,7 @@ body{
                     h1{
                         font-family: $font-primary;
                         letter-spacing: -3px;
-                        width: 567px;
+                        max-width: 567px;
                         margin: 18px 0 16px;
                         
                         @include font-style(#201F1F, 75px, 600, 90px);
@@ -165,7 +170,7 @@ body{
                     .hero__info{
                         margin-bottom: 53px;
                         font-family: $font-secondary;
-                        width: 499px;
+                        max-width: 499px;
                         opacity: 0.7;
 
                         @include font-style(#676767, 18px, 400, 28px);
@@ -257,6 +262,53 @@ body{
                     &:last-child{
                         border-right: none;
                     }
+                }
+            }
+        }
+
+        .app{
+            .container{
+                padding: 104px 0 120px;
+                display: flex;
+                justify-content: space-between;
+
+                .app__info{
+                    max-width: 545px;
+                   h2{
+                    padding-top: 75px;
+                    margin-bottom: 63px;
+                    font-family: $font-primary;
+
+                    @include font-style(#18181B, 51px, 700, 58px);
+                   } 
+
+                   ul li{
+                    margin-bottom: 28px;
+                    font-family: $font-secondary;
+
+                    @include font-style(#676767, 20px, 400, 31px);
+                   }
+
+                   button{
+                    margin-top: 38px;
+                    padding: 20px 68px 20px 26px;
+                    font-family: $font-primary;
+                    text-align: center;
+                    background-color: $color-primary;
+                    background-image: url("../assets/icons/arrow-right.svg");
+                    background-size: 17px;
+                    background-repeat: no-repeat;
+                    background-position: 95%;
+                    border-radius: 12px;
+
+                    @include font-style(#FFF, 18px, 500, 23px);
+                    
+                   }
+
+                   img{
+                    transform: rotateY(25deg);
+                    transform: translate(-20px, 80px);
+                   }
                 }
             }
         }
