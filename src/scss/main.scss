@@ -564,6 +564,7 @@ body{
                         row-gap: 15px;
 
                         .purchases__card-dish{
+                            padding: 12px;
                             display: flex;
                             justify-content: space-between;
                             border-radius: 12px;
@@ -772,6 +773,89 @@ body{
                                     left: 0;
                                 }
                             }
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+
+        .discount{
+            .container{
+                padding: 182px 0 216px;
+
+                .discount__wrapper{
+                    padding: 37px 72px 61px 66px;
+                    margin-left: 46px;
+                    border-radius: 30px;
+                    background-color: $color-primary;
+                    display: flex;
+                    justify-content: space-between;
+                    position: relative;
+
+                    .discount__head{
+
+                        p{
+                            font-family: $font-primary;
+                            margin-bottom: 9px;
+
+                            @include font-style(#F7F8FA, 70px, 800);
+                        } 
+
+                        .discount__form{
+                            max-width: 440px;
+                            padding: 7px 0 7px 22px;
+                            border-radius: 14px;
+                            background: #F7F8FA;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+
+                            input {
+                                width: 100%;
+                                letter-spacing: 0.488px;
+                                border: none;
+                                outline: none;
+
+                                @include font-style(#1A202C, 16px, 400);
+
+
+                                &::placeholder {
+                                    background: #F7F8FA;
+                                    color: #878787;
+                                }
+
+                                &:focus {
+                                    border: none;
+                                    outline: none;
+                                    align-self: none;
+                                }
+                            }
+
+                            button {
+                                vertical-align: middle;
+                                // width: 132px;
+                                height: 53px;
+                                border-radius: 11px;
+                                border-style: none;
+                                text-transform: uppercase;
+                                background: $color-primary;
+                                text-align: center;
+                                margin-right: 6px;
+
+                                @include font-style(#F7F8FA, 15px, 500, 36px);
+                            }
+                        }
+                    }
+
+                    .discount__img{
+                        img{
+                            width: 274px;
+                            position: absolute;
+                            top: 64px;
+                            right: 72px;
                         }
                     }
                 }
