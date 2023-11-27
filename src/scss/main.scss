@@ -539,5 +539,243 @@ body{
                 }
             }
         }
+
+        .purchases{
+            .container{
+                border-bottom: 1px solid #CBCBCB;
+                border-top: 1px solid #CBCBCB;
+                padding: 100px 0 134px;
+                display: flex;
+                justify-content: space-between;
+
+                .purchases__dashboard{
+                    h2{
+                        font-family: $font-primary;
+                        margin-bottom: 48px;
+                        max-width: 560px;
+
+                        @include font-style(#18181B, 51px, 700, 58px);
+                    }
+
+                    .purchases__wrapper-dish{
+                        display: flex;
+                        justify-content: space-around;
+                        flex-direction: column;
+                        row-gap: 15px;
+
+                        .purchases__card-dish{
+                            display: flex;
+                            justify-content: space-between;
+                            border-radius: 12px;
+                            background-color: #FFF;
+                            box-shadow: 6px 20px 10px 0 rgba(229, 229, 229, 0.70);
+                            max-width: 345px;
+                            cursor: pointer;
+
+                            .purchases__card-dish-rigth{
+                                display: flex;
+                                justify-content: space-between;
+
+                                .purchases__img{
+                                    img{
+                                        height: 80px;
+                                        margin-right: 19px;
+                                    }
+                                }
+                                
+                                .purchases__info{
+                                    display: flex;
+                                    justify-content: center;
+                                    flex-direction: column;
+                                    align-items: flex-start;
+
+                                    .purchases__name{
+                                        font-family: $font-primary;
+
+                                        @include font-style(#323142, 19px, 600, 27px);
+                                    }
+
+                                    .purchases__status{
+                                        font-family: $font-primary;
+
+                                        @include font-style(#323142, 12px, 500, 17px);
+                                    }
+
+                                    .purchases__status-red{
+                                        font-family: $font-primary;
+
+                                        @include font-style(#F1534E, 12px, 500, 17px);
+                                    }
+                                }
+                            }
+
+                            .purchases__time{
+                                display: flex;
+                                align-items: flex-end;
+
+                                .purchases__time-order{
+                                    font-family: $font-primary;
+
+                                    @include font-style(#ACADB9, 13px, 500, 18px);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .purchases__result{
+                    border-radius: 25px;
+                    border: 2px solid #EDF2F7;
+                    background-color: #FFF;
+                    box-shadow: 6px 71px 36px 0 rgba(229, 229, 229, 0.70);
+                    padding: 38px 38px 46px;
+                    width: 42%;
+                    
+
+                    .purchases__months{
+                        margin-bottom: 38px;
+                        display: flex;
+                        justify-content: space-between;
+
+                        p{
+                            font-family: $font-third;
+                            letter-spacing: 0.314px;
+
+                            @include font-style(#1A202C, 28px, 800, 38px);
+                        }
+
+                        select{
+                            font-family: $font-third;
+                            letter-spacing: 0.628px;
+                            border-radius: 13px;
+                            background: #FAFAFA;
+                            padding: 13px 48px 13px 19px;
+                            appearance: none;
+                            overflow: hidden;
+                            background-image: url("../assets/icons/arrow-down.svg");
+                            background-size: 25px;
+                            background-repeat: no-repeat;
+                            background-position: 90%;
+                            cursor: pointer;
+
+                            @include font-style(#1A202C, 19px, 600, 28px);
+                        }
+                    }
+
+                    .purchases__wrapper-result{
+                        display: flex;
+                        justify-content: space-between;
+                        flex-direction: column;
+                        row-gap: 22px;
+
+                        .purchases__card-result{
+                            padding: 25px;
+                            display: flex;
+                            justify-content: space-between;
+                            flex-direction: column;
+                            border-radius: 19px;
+                            border: 2px solid #EDF2F7;
+
+                            .purchases__card-up{
+                                margin-bottom: 20px;
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+
+                                .purchases__card-left{
+                                    display: flex;
+                                    justify-content: space-between;
+
+                                    .purchases__result-img{
+                                        margin-right: 19px;
+                                    }
+
+                                    .purchases__result-info{
+                                        display: flex;
+                                        justify-content: space-between;
+                                        flex-direction: column;
+
+                                        .name{
+                                            font-family: $font-third;
+                                            letter-spacing: 0.628px;
+
+                                            @include font-style(#1A202C, 19px, 800, 28px);
+                                        }
+                                        
+                                        .increased{
+                                            font-family: $font-third;
+                                            letter-spacing: 0.628px;
+
+                                            @include font-style(#A0AEC0, 16px, 500, 24px);
+                                        }
+                                    }
+                                }
+
+                                .purchases__count{
+                                    font-family: $font-third;
+                                    letter-spacing: 0.314px;
+
+                                    @include font-style(#1A202C, 22px, 800, 33px);
+                                }
+                            }
+
+                            .purchases__card-strip{
+                                position: relative;
+
+                                .purchases__rectangle-border-violet{
+                                    content: "";
+                                    display: inline-block;
+                                    vertical-align: middle;
+                                    height: 9px;
+                                    background-color: rgba(105, 92, 186, 0.2);
+                                    border-radius: 79px;
+                                    position: absolute;
+                                    right: 0;
+                                    left: 0;
+                                }
+
+                                .purchases__rectangle-violet{
+                                    content: "";
+                                    display: inline-block;
+                                    vertical-align: middle;
+                                    height: 9px;
+                                    background-color: $color-primary;
+                                    border-radius: 79px;
+                                    position: absolute;
+                                    left: 0;
+                                    right: 111px;
+                                    z-index: 1;
+                                }
+
+                                .purchases__rectangle-orange{
+                                    content: "";
+                                    display: inline-block;
+                                    vertical-align: middle;
+                                    height: 9px;
+                                    background-color: #FBAD18;
+                                    border-radius: 79px;
+                                    position: absolute;
+                                    left: 0;
+                                    right: 163px;
+                                    z-index: 1;
+                                }
+
+                                .purchases__rectangle-border-orange{
+                                    content: "";
+                                    display: inline-block;
+                                    vertical-align: middle;
+                                    height: 9px;
+                                    background-color: rgba(250, 170, 23, 0.2);
+                                    border-radius: 79px;
+                                    position: absolute;
+                                    right: 0;
+                                    left: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }

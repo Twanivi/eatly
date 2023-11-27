@@ -215,7 +215,9 @@
                             </div>
                             <div class="dishes__price-add">
                                 <p class="dishes__price">$19<span class="price">.99</span></p>
-                                <div class="dishes__add"><img src="./assets/icons/add-dishes.svg" alt="add-dishes"></div>
+                                <div class="dishes__add">
+                                    <a href="#"><img src="./assets/icons/add-dishes.svg" alt="add-dishes"></a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -232,7 +234,9 @@
                             </div>
                             <div class="dishes__price-add">
                                 <p class="dishes__price">$19<span class="price">.99</span></p>
-                                <div class="dishes__add"><img src="./assets/icons/add-dishes.svg" alt="add-dishes"></div>
+                                <div class="dishes__add">
+                                    <a href="#"><img src="./assets/icons/add-dishes.svg" alt="add-dishes"></a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -249,7 +253,9 @@
                             </div>
                             <div class="dishes__price-add">
                                 <p class="dishes__price">$12<span class="price">.99</span></p>
-                                <div class="dishes__add"><img src="./assets/icons/add-dishes.svg" alt="add-dishes"></div>
+                                <div class="dishes__add">
+                                    <a href="#"><img src="./assets/icons/add-dishes.svg" alt="add-dishes"></a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -266,7 +272,9 @@
                             </div>
                             <div class="dishes__price-add">
                                 <p class="dishes__price">$19<span class="price">.99</span></p>
-                                <div class="dishes__add"><img src="./assets/icons/add-dishes.svg" alt="add-dishes"></div>
+                                <div class="dishes__add">
+                                    <a href="#"><img src="./assets/icons/add-dishes.svg" alt="add-dishes"></a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -276,72 +284,90 @@
         </section>
         <section class="purchases">
             <div class="container">
-            <div class="purchases__dashboard">
-                <h2>Control <span class="color">Purchases</span> Via Dashboard</h2>
-                <div class="purchases__wrapper-dish">
-                    <div class="purchases__card-dish">
-                        <div class="purchases__img"><img src="./assets/images/chicken-hell.png" alt="chicken-hell"></div>
-                        <div class="purchases__info">
-                            <p class="purchases__name">Chicken Hell</p>
-                            <p class="purchases__status">On The Way</p>
+                <div class="purchases__dashboard">
+                    <h2>Control <span class="color">Purchases</span> Via Dashboard</h2>
+                    <div class="purchases__wrapper-dish">
+                        <div class="purchases__card-dish">
+                            <div class="purchases__card-dish-rigth">
+                                <div class="purchases__img"><img src="./assets/images/chicken-hell.png" alt="chicken-hell"></div>
+                                <div class="purchases__info">
+                                    <p class="purchases__name">Chicken Hell</p>
+                                    <p class="purchases__status">On The Way</p>
+                                </div>
+                            </div>
+                            <div class="purchases__time">
+                                <p class="purchases__time-order">3:09 PM</p>
+                            </div>
                         </div>
-                        <div class="purchases__time">
-                            <p class="purchases__time-order">3:09 PM</p>
+                        <div class="purchases__card-dish">
+                            <div class="purchases__card-dish-rigth">
+                                <div class="purchases__img"><img src="./assets/images/swe-dish-trending.png" alt="swe-dish-trending"></div>
+                                <div class="purchases__info">
+                                    <p class="purchases__name">Swe Dish</p>
+                                    <p class="purchases__status">Delivered</p>
+                                </div>
+                            </div>
+                            <div class="purchases__time">
+                                <p class="purchases__time-order">Yesterday</p>
+                            </div>
+                        </div>
+                        <div class="purchases__card-dish">
+                            <div class="purchases__card-dish-rigth">
+                                <div class="purchases__img"><img src="./assets/images/swe-dish-supreme.png" alt="chicken-hell"></div>
+                                <div class="purchases__info">
+                                    <p class="purchases__name">Fish Hell Veg</p>
+                                    <p class="purchases__status-red">Cancelled</p>
+                                </div>
+                            </div>
+                            <div class="purchases__time">
+                                <p class="purchases__time-order">Yesterday</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="purchases__card-dish">
-                        <div class="purchases__img"><img src="./assets/images/swe-dish-trending.png" alt="swe-dish-trending"></div>
-                        <div class="purchases__info">
-                            <p class="purchases__name">Swe Dish</p>
-                            <p class="purchases__status">Delivered</p>
-                        </div>
-                        <div class="purchases__time">
-                            <p class="purchases__time-order">Yesterday</p>
-                        </div>
+                </div>
+                <div class="purchases__result">
+                    <div class="purchases__months">
+                        <p>Purchases</p>
+                        <select>
+                            <option value="" hidden>This month</option>
+                        </select>
                     </div>
-                    <div class="purchases__card-dish">
-                        <div class="purchases__img"><img src="./assets/images/swe-dish-supreme.png" alt="chicken-hell"></div>
-                        <div class="purchases__info">
-                            <p class="purchases__name">Fish Hell Veg</p>
-                            <p class="purchases__status">Cancelled</p>
+                    <div class="purchases__wrapper-result">
+                        <div class="purchases__card-result">
+                            <div class="purchases__card-up">
+                                <div class="purchases__card-left">
+                                    <div class="purchases__result-img"><img src="./assets/icons/wallet.svg" alt="wallet"></div>
+                                    <div class="purchases__result-info">
+                                        <p class="name">Expense</p>
+                                        <p class="increased">Increased By 10%</p>
+                                    </div>
+                                </div>
+                                <p class="purchases__count">$409.00</p>
+                            </div>
+                            <div class="purchases__card-strip">
+                                <div class="purchases__rectangle-violet"></div>
+                                <div class="purchases__rectangle-border-violet"></div>
+                            </div>
                         </div>
-                        <div class="purchases__time">
-                            <p class="purchases__time-order">Yesterday</p>
+                        <div class="purchases__card-result">
+                            <div class="purchases__card-up">
+                                <div class="purchases__card-left">
+                                    <div class="purchases__result-img"><img src="./assets/icons/money.svg" alt="money"></div>
+                                    <div class="purchases__result-info">
+                                        <p class="name">Vocher Usage</p>
+                                        <p class="increased">Increased By 5%</p>
+                                    </div>
+                                </div>
+                                <p class="purchases__count">$45.78</p>
+                            </div>
+                            <div class="purchases__card-strip">
+                                <div class="purchases__rectangle-orange"></div>
+                                <div class="purchases__rectangle-border-orange"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="purchases__result">
-                <div class="purchases__months">
-                    <p>Purchases</p>
-                    <select>
-                        <option value="" hidden>This month</option>
-                    </select>
-                </div>
-                <div class="purchases__wrapper-result">
-                    <div class="purchases__card-result">
-                        <div class="purchases__result-img"><img src="./assets/icons/wallet.svg" alt="wallet"></div>
-                        <div class="purchases__result-info">
-                            <p class="name">Expense</p>
-                            <p class="increased">Increased By 10%</p>
-                        </div>
-                        <p class="purchases__count">$409.00</p>
-                        <div class="purchases__rectangle-violet"></div>
-                        <div class="purchases__rectangle-border-violet"></div>
-                    </div>
-                    <div class="purchases__card-result">
-                        <div class="purchases__result-img"><img src="./assets/icons/money.svg" alt="money"></div>
-                        <div class="purchases__result-info">
-                            <p class="name">Vocher Usage</p>
-                            <p class="increased">Increased By 5%</p>
-                        </div>
-                        <p>$45.78</p>
-                        <div class="purchases__rectangle-orange"></div>
-                        <div class="purchases__rectangle-border-orangej"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
         </section>
         <div class="container">
         <section class="feedback">
