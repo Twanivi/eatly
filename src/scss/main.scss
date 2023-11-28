@@ -865,4 +865,64 @@ body{
             }
         }
     }
+
+    footer{
+        background-color: #EAEAEA;
+
+        .container{
+            padding: 86px 0 91px;
+
+            .navigation{
+                padding-bottom: 29px;
+                border-bottom: 1px solid rgba(130, 130, 130, 0.25);
+                display: flex;
+                justify-content: space-between;
+
+                .logotip{
+
+                    .logo-name{
+                        margin-left: 15px;
+                        font-family: $font-primary;
+
+                        @include font-style($color-primary, 28px, 600, 37px);
+                    }
+                    
+                }
+
+                .nav-footer{
+                    ul{
+                        display: flex;
+                        justify-content: space-between;
+                        column-gap: 70px;
+
+                        li{
+                            font-family: $font-secondary;
+                            list-style: none;
+
+                            @include font-style(#999, 18px, 500, 27px);
+                        }
+                    }
+                }
+
+            }
+
+            .contact{
+                padding-top: 57px;
+                display: flex;
+                justify-content: space-between;
+
+                p{
+                    font-family: $font-secondary;
+
+                    @include font-style(#999, 17px, 500, 25px);
+                }
+
+                .social-media{
+                    display: flex;
+                    justify-content: space-between;
+                    column-gap: 53px;
+                }
+            }
+        }
+    }
 }
