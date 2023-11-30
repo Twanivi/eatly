@@ -1,11 +1,5 @@
-$font-primary: 'Poppins', sans-serif;
-$font-secondary: 'Inter', sans-serif;
-$font-third: 'Manrope', sans-serif;
-$font-forth: 'Plus Jakarta Sans', sans-serif;
-$font-fifth: 'Public Sans', sans-serif;
-$font-sixth: 'Quicksand', sans-serif;
-
-$color-primary: #6C5FBC;
+@use 'vars';
+@use 'popup-sign-in';
 
 @mixin font-style($color, $size, $weight, $lheight: auto) {
     color: $color;
@@ -26,7 +20,7 @@ $color-primary: #6C5FBC;
 }
 
 body{
-    font-family: $font-primary;
+    font-family: vars.$font-primary;
     background-color: #F9F9F9;
 
     a{
@@ -35,14 +29,12 @@ body{
     }
 
     .color{
-        color: $color-primary;
+        color: vars.$color-primary;
     }
 
     button{
         cursor: pointer;
     }
-
-    
 
     header{
         position: absolute;
@@ -77,7 +69,7 @@ body{
                     .name-logo{
                         margin-left: 11px;
 
-                        @include font-style($color-primary, 21px, 600, 28px);
+                        @include font-style(vars.$color-primary, 21px, 600, 28px);
                     }
                 }
 
@@ -108,7 +100,7 @@ body{
                 align-items: center;
 
                 button{
-                    font-family: $font-secondary;
+                    font-family: vars.$font-secondary;
                     padding: 18px 27px;
                     background-color: #F9F9F9;
                     border-radius: 18px;
@@ -119,7 +111,7 @@ body{
                     @include font-style(#606060, 18px, 700, 27px);
 
                     &:hover{
-                        background-color: $color-primary;
+                        background-color: vars.$color-primary;
                         
                         color: #F9F9F9;
                         transition: 0.5s;
@@ -141,7 +133,7 @@ body{
                     padding: 70px 0 46px;
               
                     .hero__tittle-comment{
-                        font-family: $font-primary;
+                        font-family: vars.$font-primary;
                         letter-spacing: 2px;
 
                         @include font-style(rgba(32, 31, 31, 0.20), 15px, 600, 18px);
@@ -159,7 +151,7 @@ body{
                     }
 
                     h1{
-                        font-family: $font-primary;
+                        font-family: vars.$font-primary;
                         letter-spacing: -3px;
                         max-width: 567px;
                         margin: 18px 0 16px;
@@ -169,7 +161,7 @@ body{
 
                     .hero__info{
                         margin-bottom: 53px;
-                        font-family: $font-secondary;
+                        font-family: vars.$font-secondary;
                         max-width: 499px;
                         opacity: 0.7;
 
@@ -180,19 +172,19 @@ body{
                         margin-bottom: 33px;
 
                         button{
-                            font-family: $font-primary;
+                            font-family: vars.$font-primary;
                             padding: 18px 31px;
                             background-color: #F9F9F9;
                             border: none;
                             border-radius: 12px;
                             transition: 0.5s;
-                            outline: 1px solid $color-primary;
+                            outline: 1px solid vars.$color-primary;
                             margin-right: 18px;
 
-                            @include font-style($color-primary, 16px, 500);
+                            @include font-style(vars.$color-primary, 16px, 500);
 
                             &:hover{
-                                background-color: $color-primary;
+                                background-color: vars.$color-primary;
                                 
                                 color: #F9F9F9;
                                 transition: 0.5s;
@@ -213,7 +205,7 @@ body{
                         }
 
                         .hero__feedback-users{
-                            font-family: $font-forth;
+                            font-family: vars.$font-forth;
                             opacity: 0.7;
                             margin-left: 9px;
 
@@ -244,7 +236,7 @@ body{
  
 
                     .experience__number{
-                        font-family: $font-fifth;
+                        font-family: vars.$font-fifth;
                         text-align: center;
                         padding-right: 66px;
 
@@ -252,7 +244,7 @@ body{
                     }
 
                     .experience__info{
-                        font-family: $font-secondary;
+                        font-family: vars.$font-secondary;
                         text-align: center;
                         padding-right: 66px;
 
@@ -277,14 +269,14 @@ body{
                    h2{
                     padding-top: 75px;
                     margin-bottom: 63px;
-                    font-family: $font-primary;
+                    font-family: vars.$font-primary;
 
                     @include font-style(#18181B, 51px, 700, 58px);
                    } 
 
                    ul li{
                     margin-bottom: 28px;
-                    font-family: $font-secondary;
+                    font-family: vars.$font-secondary;
 
                     @include font-style(#676767, 20px, 400, 31px);
                    }
@@ -292,9 +284,9 @@ body{
                    button{
                     margin-top: 38px;
                     padding: 20px 68px 20px 26px;
-                    font-family: $font-primary;
+                    font-family: vars.$font-primary;
                     text-align: center;
-                    background-color: $color-primary;
+                    background-color: vars.$color-primary;
                     background-image: url("../assets/icons/arrow-right.svg");
                     background-size: 27px;
                     background-repeat: no-repeat;
@@ -320,7 +312,7 @@ body{
                 border-bottom: 1px solid #CBCBCB;
 
                 h3{
-                    font-family: $font-primary;
+                    font-family: vars.$font-primary;
                     text-align: center;
                     margin-bottom: 86px;
 
@@ -348,7 +340,7 @@ body{
                             margin: 0 27px 0 33px;
 
                             .restaurants__mark{
-                                font-style: $font-primary;
+                                font-family: vars.$font-primary;
                                 width: 66px;
                                 border-radius: 5px;
                                 background-color: #F7EDD0;
@@ -358,7 +350,7 @@ body{
                             }
 
                             .restaurants__mark2{
-                                font-style: $font-primary;
+                                font-family: vars.$font-primary;
                                 width: 66px;
                                 border-radius: 5px;
                                 background-color: #F7C5BA;
@@ -368,7 +360,7 @@ body{
                             }
 
                             .restaurants__name{
-                                font-style: $font-primary;
+                                font-family: vars.$font-primary;
 
                                 @include font-style(#323142, 26px, 600, 42px);
                             }
@@ -383,7 +375,7 @@ body{
                                     justify-content: space-between;
 
                                     .restaurants__time, .restaurants__popular{
-                                        font-family: $font-third;
+                                        font-family: vars.$font-third;
 
                                         @include font-style(#8E97A6, 19px, 400, 26px);
                                     }
@@ -405,7 +397,7 @@ body{
                     margin-top: 66px;
                     padding-right: 47px;
                     text-align: end;
-                    font-family: $font-primary;
+                    font-family: vars.$font-primary;
                     letter-spacing: -0.1px;
                     background-image: url("../assets/icons/arrow-right-gray.svg");
                     background-size: 27px;
@@ -422,7 +414,7 @@ body{
                 padding: 100px 0 120px;
 
                 h3{
-                    font-family: $font-primary;
+                    font-family: vars.$font-primary;
                     text-align: center;
                     margin-bottom: 76px;
 
@@ -452,11 +444,17 @@ body{
                             top: 20px;
                         }
 
+                        .dishes__img{
+                            img{
+                                width: 201px;
+                            }
+                        }
+
                         .dishes__info{
                             padding: 0 23px;
 
                             .dishes__mark{
-                                font-style: $font-primary;
+                                font-family: vars.$font-primary;
                                 width: 66px;
                                 border-radius: 5px;
                                 background-color: #F7EDD0;
@@ -466,7 +464,7 @@ body{
                             }
 
                             .dishes__mark2{
-                                font-style: $font-primary;
+                                font-family: vars.$font-primary;
                                 width: 66px;
                                 border-radius: 5px;
                                 background-color: #F7C5BA;
@@ -476,7 +474,7 @@ body{
                             }
 
                             .dishes__mark3{
-                                font-style: $font-primary;
+                                font-family: vars.$font-primary;
                                 width: 66px;
                                 border-radius: 5px;
                                 background-color: rgba(51, 173, 100, 0.2);
@@ -486,7 +484,7 @@ body{
                             }
 
                             .dishes__name{
-                                font-style: $font-primary;
+                                font-family: vars.$font-primary;
 
                                 @include font-style(#323142, 23px, 600, 37px);
                             }
@@ -496,7 +494,7 @@ body{
                                 justify-content: flex-start;
 
                                 .dishes__time, .dishes__popular{
-                                    font-family: $font-third;
+                                    font-family: vars.$font-third;
 
                                     @include font-style(#8E97A6, 17px, 400, 23px);
                                 }
@@ -507,12 +505,12 @@ body{
                                 justify-content: space-between;
 
                                 .dishes__price{
-                                    font-family: $font-third;
+                                    font-family: vars.$font-third;
 
                                     @include font-style(#323142, 26px, 700, 40px);
 
                                     .price{
-                                        font-family: $font-third;
+                                        font-family: vars.$font-third;
 
                                         @include font-style(#8E97A6, 19px, 700, 40px);
                                     }
@@ -528,7 +526,7 @@ body{
                     margin-top: 66px;
                     padding-right: 47px;
                     text-align: end;
-                    font-family: $font-primary;
+                    font-family: vars.$font-primary;
                     letter-spacing: -0.1px;
                     background-image: url("../assets/icons/arrow-right-gray.svg");
                     background-size: 27px;
@@ -550,7 +548,7 @@ body{
 
                 .purchases__dashboard{
                     h2{
-                        font-family: $font-primary;
+                        font-family: vars.$font-primary;
                         margin-bottom: 48px;
                         max-width: 560px;
 
@@ -591,19 +589,19 @@ body{
                                     align-items: flex-start;
 
                                     .purchases__name{
-                                        font-family: $font-primary;
+                                        font-family: vars.$font-primary;
 
                                         @include font-style(#323142, 19px, 600, 27px);
                                     }
 
                                     .purchases__status{
-                                        font-family: $font-primary;
+                                        font-family: vars.$font-primary;
 
                                         @include font-style(#323142, 12px, 500, 17px);
                                     }
 
                                     .purchases__status-red{
-                                        font-family: $font-primary;
+                                        font-family: vars.$font-primary;
 
                                         @include font-style(#F1534E, 12px, 500, 17px);
                                     }
@@ -615,7 +613,7 @@ body{
                                 align-items: flex-end;
 
                                 .purchases__time-order{
-                                    font-family: $font-primary;
+                                    font-family: vars.$font-primary;
 
                                     @include font-style(#ACADB9, 13px, 500, 18px);
                                 }
@@ -639,14 +637,14 @@ body{
                         justify-content: space-between;
 
                         p{
-                            font-family: $font-third;
+                            font-family: vars.$font-third;
                             letter-spacing: 0.314px;
 
                             @include font-style(#1A202C, 28px, 800, 38px);
                         }
 
                         select{
-                            font-family: $font-third;
+                            font-family: vars.$font-third;
                             letter-spacing: 0.628px;
                             border-radius: 13px;
                             background: #FAFAFA;
@@ -697,14 +695,14 @@ body{
                                         flex-direction: column;
 
                                         .name{
-                                            font-family: $font-third;
+                                            font-family: vars.$font-third;
                                             letter-spacing: 0.628px;
 
                                             @include font-style(#1A202C, 19px, 800, 28px);
                                         }
                                         
                                         .increased{
-                                            font-family: $font-third;
+                                            font-family: vars.$font-third;
                                             letter-spacing: 0.628px;
 
                                             @include font-style(#A0AEC0, 16px, 500, 24px);
@@ -713,7 +711,7 @@ body{
                                 }
 
                                 .purchases__count{
-                                    font-family: $font-third;
+                                    font-family: vars.$font-third;
                                     letter-spacing: 0.314px;
 
                                     @include font-style(#1A202C, 22px, 800, 33px);
@@ -740,7 +738,7 @@ body{
                                     display: inline-block;
                                     vertical-align: middle;
                                     height: 9px;
-                                    background-color: $color-primary;
+                                    background-color: vars.$color-primary;
                                     border-radius: 79px;
                                     position: absolute;
                                     left: 0;
@@ -785,7 +783,7 @@ body{
 
                 h3{
                     margin-bottom: 80px;
-                    font-family: $font-primary;
+                    font-family: vars.$font-primary;
                     text-align: center;
 
                     @include font-style(#323142, 45px, 600, 26px);
@@ -795,12 +793,9 @@ body{
                     display: flex;
                     justify-content: space-between;
                     column-gap: 46px;
+                    overflow-x: scroll;
+                    scroll-snap-type: x mandatory;
                     
-
-                    &:nth-child(n + 1){
-                        overflow-x: scroll;
-                        scroll-snap-type: x mandatory;
-                    }
 
                     &::-webkit-scrollbar {
                         height: 9px;
@@ -811,7 +806,7 @@ body{
                     }
 
                     &::-webkit-scrollbar-thumb {
-                        background: $color-primary;
+                        background: vars.$color-primary;
                     }
                     &::-webkit-scrollbar-track {
                         background: rgba(108, 95, 188, 0.2);
@@ -852,14 +847,14 @@ body{
 
                                 .feedback__name{
                                     .name{
-                                        font-family: $font-primary;
+                                        font-family: vars.$font-primary;
 
                     
                                         @include font-style(#030314, 21px, 500, 31px);
                                     }
 
                                     .time{
-                                        font-family: $font-sixth;
+                                        font-family: vars.$font-sixth;
 
                     
                                         @include font-style(#5E5D5D, 17px, 500, 26px);
@@ -903,7 +898,7 @@ body{
                     .discount__head{
 
                         p{
-                            font-family: $font-primary;
+                            font-family: vars.$font-primary;
                             margin-bottom: 9px;
 
                             @include font-style(#F7F8FA, 70px, 800);
@@ -946,7 +941,7 @@ body{
                                 border-radius: 11px;
                                 border-style: none;
                                 text-transform: uppercase;
-                                background: $color-primary;
+                                background: vars.$color-primary;
                                 text-align: center;
                                 margin-right: 6px;
 
@@ -984,9 +979,9 @@ body{
 
                     .logo-name{
                         margin-left: 15px;
-                        font-family: $font-primary;
+                        font-family: vars.$font-primary;
 
-                        @include font-style($color-primary, 28px, 600, 37px);
+                        @include font-style(vars.$color-primary, 28px, 600, 37px);
                     }
                     
                 }
@@ -998,7 +993,7 @@ body{
                         column-gap: 70px;
 
                         li{
-                            font-family: $font-secondary;
+                            font-family: vars.$font-secondary;
                             list-style: none;
 
                             @include font-style(#999, 18px, 500, 27px);
@@ -1014,7 +1009,7 @@ body{
                 justify-content: space-between;
 
                 p{
-                    font-family: $font-secondary;
+                    font-family: vars.$font-secondary;
 
                     @include font-style(#999, 17px, 500, 25px);
                 }
@@ -1027,4 +1022,6 @@ body{
             }
         }
     }
+
+    
 }

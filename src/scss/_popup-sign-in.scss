@@ -1,0 +1,238 @@
+@use 'vars';
+
+    .popup-sign-in{
+        position: fixed;
+        background-color: rgba(107, 94, 189, 0.719);
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        visibility: hidden;
+        transition: .8s;
+        min-height: 200vh;   
+
+        .popup-sign-in__content{
+            width: 80%;
+            background-color: #fff;
+            position: relative;
+            top: 0;
+            left: 10%;            
+            
+            .popup-sign-in__left-side{
+                padding: 32px 711px 48px 48px;
+
+                .popup-sign-in__img{
+                    a{
+                        img{
+                            width: 53px;
+                        }
+                    }
+                }
+
+                .popup-sign-in__form{
+                    margin: 141px 194px 117px;
+                    max-width: 388px;
+                        
+                    form{
+                        
+                        .popup-sign-in__name{
+                            margin-bottom: 48px;
+                            color: #323142;
+                            font-family: vars.$font-primary;
+                            font-size: 35px;
+                            font-weight: 600;
+                            line-height: 44px;
+                            letter-spacing: -1.41px;
+                            text-align: center;
+                        }
+
+                        .popup-sign-in__btns{
+                            display: flex;
+                            justify-content: space-between;
+                            column-gap: 21px;
+
+                            .popup-sign-in__google{
+                                border-radius: 13px;
+                                background: #F5F5F5;
+                                color: #323142;
+                                text-align: center;
+                                font-family: vars.$font-primary;
+                                font-size: 31px;
+                                font-weight: 600;
+                                line-height: 44px;
+                                letter-spacing: 2.835px;
+                                border-style: none;
+                                width: 183px;
+                            }
+
+                            .popup-sign-in__apple{
+                                border-radius: 13px;
+                                background: #F5F5F5;
+                                border-style: none;
+                                width: 183px;
+                            }
+                        }
+
+                        .popup-sign-in__or{
+                            margin: 33px 0 39px;
+                            color: rgba(50, 49, 66, 0.35);
+                            font-family: vars.$font-primary;
+                            font-size: 20px;
+                            font-weight: 500;
+                            letter-spacing: 0.6px;
+                            text-align: center;
+                        }
+
+                        .popup-sign-in__email{
+                            width: 100%;
+                            background: url("../assets/icons/email-gray.svg") no-repeat 23px 22px;
+                            padding: 24px 0 25px 79px;
+                            border-radius: 14px;
+                            background-color: #F5F5F5;
+                            border-style: none;
+                            color: #6C5FBC;
+                            font-family: vars.$font-primary;
+                            font-size: 17px;
+                            font-weight: 500;
+                            letter-spacing: 0.334px;
+                            text-transform: capitalize;
+
+                            &::placeholder{
+                                color: #C2C3CB;
+                                font-family: vars.$font-primary;
+                                font-size: 17px;
+                                font-weight: 600;
+                                letter-spacing: 1.167px;
+                                text-transform: uppercase;
+                            }
+                        }
+
+                        .popup-sign-in__password{
+                            margin: 25px 0 12px;
+                            width: 100%;
+                            background: url("../assets/icons/lock-gray.svg") no-repeat 23px 20px, url("../assets/icons/eye-gray.svg") no-repeat 330px 20px;
+                            padding: 24px 0 25px 79px;
+                            border-radius: 14px;
+                            background-color: #F5F5F5;
+                            border-style: none;
+                            color: #6C5FBC;
+                            font-family: vars.$font-primary;
+                            font-size: 17px;
+                            font-weight: 500;
+                            letter-spacing: 0.334px;
+                            text-transform: capitalize;
+
+                            &::placeholder{
+                                color: #C2C3CB;
+                                font-family: vars.$font-primary;
+                                font-size: 17px;
+                                font-weight: 600;
+                                letter-spacing: 1.167px;
+                                text-transform: uppercase;
+                            }
+
+                        }
+
+                        .popup-sign-in__forget{
+                            text-align: right;
+                            color: rgba(105, 93, 187, 0.7);
+                            font-family: vars.$font-primary;
+                            font-size: 16px;
+                            font-weight: 400;
+                        }
+
+                        .popup-sign-in__inside{
+                            margin: 20px 0 23px;
+                            padding: 24px 100px;
+                            width: 100%;
+                            border-radius: 16px;
+                            border-style: none;
+                            background: vars.$color-primary;
+                            color: #F3F5F6;
+                            font-family: vars.$font-primary;
+                            font-size: 18px;
+                            font-weight: 600;
+                            letter-spacing: 0.534px;
+                            text-transform: uppercase;
+                        }
+
+                        .popup-sign-in__create{
+                            color: #3E3E3E;
+                            font-family: vars.$font-primary;
+                            font-size: 19px;
+                            font-weight: 400;
+                            letter-spacing: 0.189px;
+                            text-align: center;
+                        }
+                    }
+                }
+
+                .popup-sign-in__footer{
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+
+            aside{
+                position: absolute;
+                width: 46%;
+                height: 100%;
+                top: 0;
+                right: 0;
+                background-color: vars.$color-primary;
+
+                .aside__wrapper{
+                    padding: 249px 39px 120px 78px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+
+                    .aside__img{
+                        width: 546px; 
+                        height: 416px;  
+                    }
+
+                    h4{
+                        max-width: 500px;
+                        margin: 74px 0 20px;
+                        color: #FFF;
+                        text-align: center;
+                        font-family: vars.$font-third;
+                        font-size: 40px;
+                        font-weight: 800;
+                        line-height: 44px;
+                    }
+
+                    p{
+                        max-width: 500px;
+                        margin-bottom: 32px;
+                        color: rgba(255, 255, 255, 0.7);
+                        text-align: center;
+                        font-family: vars.$font-third;
+                        font-size: 14px;
+                        font-weight: 500;
+                        line-height: 21px;
+                        letter-spacing: 0.2px;
+                    }
+
+                    .aside__btns{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        column-gap: 8px;
+                        width: 24px;
+                    }
+                }
+            }
+        }
+    }
+
+    .popup-sign-in.active{
+        opacity: 1;
+        visibility: visible;
+        transition: .8s;
+    }
+
