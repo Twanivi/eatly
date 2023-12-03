@@ -15,39 +15,40 @@ export const popupLogin = () => {
             popupIn.classList.remove('active');
         }
     })
-}
 
-const validMail = () => {
-    const re = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-    const valid = re.test(emailSignIn.value);
-    if (valid) {
-        output = 'Email address entered correctly!';
-    } else {
-        output = 'Email address entered incorrectly!';
-        emailSignIn.value = output;
-        
+    const validMail = () => {
+        const re = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+        const valid = re.test(emailSignIn.value);
+        if (valid) {
+            output = 'Email address entered correctly!';
+        } else {
+            output = 'Email address entered incorrectly!';
+            emailSignIn.value = output;
+            
+        }
+        return valid;
     }
-    return valid;
-}
-
-const validPassword = () => {
-    let regularExpression = /^(\S)(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z])(?=.*[~`!@#$%^&*()--+={}\[\]|\\:;"'<>,.?/_₹])[a-zA-Z0-9~`!@#$%^&*()--+={}\[\]|\\:;"'<>,.?/_₹]{10,16}$/i;
-    let validPass = regularExpression.test(passSignIn.value);
-    if(!validPass) {
-        output = 'password should contain atleast one number and one special character';
-        emailSignIn.value = output;
-        return false;
-    } else {
-        output = 'password entered correctly!';
+    
+    const validPassword = () => {
+        let regularExpression = /^(\S)(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z])(?=.*[~`!@#$%^&*()--+={}\[\]|\\:;"'<>,.?/_₹])[a-zA-Z0-9~`!@#$%^&*()--+={}\[\]|\\:;"'<>,.?/_₹]{10,16}$/i;
+        let validPass = regularExpression.test(passSignIn.value);
+        if(!validPass) {
+            output = 'password should contain atleast one number and one special character';
+            emailSignIn.value = output;
+            return false;
+        } else {
+            output = 'password entered correctly!';
+        }
+        return validPass;
     }
-    return validPass;
-}
-
-export const submitSignIn = () => {
+    
     btnSignIn.addEventListener('submit', (e) => {
         e.preventDefault();
         return (validMail() && validPassword());
     })
 }
+
+
+
 
 
