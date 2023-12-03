@@ -1,0 +1,191 @@
+@use 'vars';
+
+    .popup-change{
+        position: fixed;
+        background-color: rgba(107, 94, 189, 0.719);
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        visibility: hidden;
+        transition: .8s;
+        min-height: 200vh;   
+
+        .popup-change__content{
+            width: 80%;
+            background-color: #fff;
+            position: relative;
+            top: 0;
+            left: 10%;            
+            
+            .popup-change__left-side{
+                padding: 32px 711px 48px 48px;
+                position: relative;
+
+                .popup-change__img{
+                    a{
+                        img{
+                            width: 53px;
+                        }
+                    }
+                }
+
+                .popup-change__form{
+                    margin: 201px 191px 297px 198px;
+                    max-width: 388px;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: .8s;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+
+                    .popup-change__name{
+                        margin-bottom: 25px;
+                        color: #323142;
+                        font-family: vars.$font-primary;
+                        font-size: 35px;
+                        font-weight: 600;
+                        line-height: 44px;
+                        letter-spacing: -1.41px;
+                        text-align: center;
+                    }
+
+                    .popup-change__descr{
+                        color: #CFCFD3;
+                        font-family: vars.$font-primary;
+                        font-size: 23px;
+                        font-weight: 500;
+                        line-height: 28px;
+                        text-align: center;
+                    }
+
+                    .popup-change__email{
+                        width: 100%;
+                        background: url("../assets/icons/email-gray.svg") no-repeat 23px 26px;
+                        padding: 24px 23px 25px 79px;
+                        border-radius: 14px;
+                        background-color: #F5F5F5;
+                        border-style: none;
+                        color: #6C5FBC;
+                        font-family: vars.$font-primary;
+                        font-size: 17px;
+                        font-weight: 500;
+                        letter-spacing: 0.334px;
+                        text-transform: capitalize;
+                        margin: 90px 0 35px;
+
+                        &::placeholder{
+                            color: #C2C3CB;
+                            font-family: vars.$font-primary;
+                            font-size: 17px;
+                            font-weight: 600;
+                            letter-spacing: 1.167px;
+                            text-transform: uppercase;
+                        }
+
+                        &:focus{
+                            outline: 2px solid vars.$color-primary;
+                            background: url("../assets/icons/email-violet.svg") no-repeat 23px 26px;
+                            background-color: #fff;
+                        }
+                    }
+
+                    .popup-change__inside{
+                        padding: 24px 100px;
+                        width: 100%;
+                        border-radius: 16px;
+                        border-style: none;
+                        background: vars.$color-primary;
+                        color: #F3F5F6;
+                        font-family: vars.$font-primary;
+                        font-size: 18px;
+                        font-weight: 600;
+                        letter-spacing: 0.534px;
+                        text-transform: uppercase;
+                    }
+                }
+
+                .popup-change__footer{
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+
+            aside{
+                position: absolute;
+                width: 46%;
+                height: 100%;
+                top: 0;
+                right: 0;
+                background-color: vars.$color-primary;
+
+                .aside__wrapper{
+                    padding: 249px 39px 120px 78px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+
+                    .aside__img{
+                        width: 546px; 
+                        height: 416px;  
+                    }
+
+                    h4{
+                        max-width: 500px;
+                        margin: 74px 0 20px;
+                        color: #FFF;
+                        text-align: center;
+                        font-family: vars.$font-third;
+                        font-size: 40px;
+                        font-weight: 800;
+                        line-height: 44px;
+                    }
+
+                    p{
+                        max-width: 500px;
+                        margin-bottom: 32px;
+                        color: rgba(255, 255, 255, 0.7);
+                        text-align: center;
+                        font-family: vars.$font-third;
+                        font-size: 14px;
+                        font-weight: 500;
+                        line-height: 21px;
+                        letter-spacing: 0.2px;
+                    }
+
+                    .aside__btns{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        column-gap: 8px;
+                        width: 42px;
+
+                        button{
+                            width: 6px;
+                            height: 6px;
+                            border-radius: 50%;
+                            background: rgba(255, 255, 255, 0.5);
+                            border-style: none;
+                        }
+
+                        .first{
+                            width: 24px;
+                            height: 6px;
+                            background: #FFF;
+                            border-radius: 50px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .popup-change.active{
+        opacity: 1;
+        visibility: visible;
+        transition: .8s;
+    }

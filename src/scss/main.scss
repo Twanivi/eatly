@@ -1,6 +1,7 @@
 @use 'vars';
 @use 'popup-sign-in';
 @use 'popup-sign-up';
+@use 'popup-change-pass';
 
 @mixin font-style($color, $size, $weight, $lheight: auto) {
     color: $color;

@@ -80,7 +80,7 @@
                         }
 
                         .popup-sign-up__or{
-                            margin: 33px 0 39px;
+                            margin: 33px 0 43px;
                             color: rgba(50, 49, 66, 0.35);
                             font-family: vars.$font-primary;
                             font-size: 20px;
@@ -91,6 +91,7 @@
 
                         .popup-sign-up__user{
                             width: 100%;
+                            margin-bottom: 25px;
                             background: url("../assets/icons/user-gray.svg") no-repeat 23px 26px;
                             padding: 24px 23px 25px 79px;
                             border-radius: 14px;
@@ -150,7 +151,7 @@
                         }
 
                         .popup-sign-up__password{
-                            margin: 25px 0 12px;
+                            margin: 25px 0 39px;
                             width: 100%;
                             background: url("../assets/icons/lock-gray.svg") no-repeat 23px 20px, url("../assets/icons/eye-gray.svg") no-repeat 330px 24px;
                             padding: 24px 23px 25px 79px;
@@ -181,7 +182,7 @@
                         }
 
                         .popup-sign-up__inside{
-                            margin: 20px 0 23px;
+                            margin-bottom: 23px;
                             padding: 24px 100px;
                             width: 100%;
                             border-radius: 16px;

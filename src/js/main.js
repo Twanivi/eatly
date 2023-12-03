@@ -1,8 +1,10 @@
-import { popupLogin, changePass, submitSignIn} from "./modules/popup-sign-in";
+import { popupLogin, submitSignIn} from "./modules/popup-sign-in";
 popupLogin();
-changePass();
 submitSignIn();
 
 
 import { popupSignUp } from "./modules/popup-sign-up";
 popupSignUp();
+
+import { changePass } from "./modules/popup-change-pass";
+changePass();

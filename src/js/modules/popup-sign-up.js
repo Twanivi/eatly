@@ -1,4 +1,3 @@
-const popupIn = document.querySelector('#popup-in');
 const registrBtn = document.querySelector('.header-sign-up');
 const popupUp = document.querySelector('#popup-up');
 const closedPopupUp = document.querySelector('.popup-sign-up__content');
@@ -8,9 +7,8 @@ export const popupSignUp = () => {
     document.addEventListener('click', (event) => {
         const el = event.target;
         if (el === registrBtn){
-            popupIn.classList.remove('active');
             popupUp.classList.add('active');           
-        } else if(element === closedPopupOnLogo || !element.closest('.popup-sign-up__content')){
+        } else if(el === closedPopupOnLogo || !el.closest('.popup-sign-up__content')){
             popupUp.classList.remove('active');
         }
     })
