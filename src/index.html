@@ -483,28 +483,36 @@
         </div>
     </footer>
 
-    <div id="popup" class="popup-sign-in">
+    <div id="popup-in" class="popup-sign-in">
         <div class="popup-sign-in__content">
             <div class="popup-sign-in__left-side">
                 <div class="popup-sign-in__img">
                     <a href="#"><img src="../src/assets/icons/logo-eatly.svg" alt="logo-eatly"></a>
                 </div>
                 <div class="popup-sign-in__form">
-                    <form action="#">
-                    <p class="popup-sign-in__name">Sign In To eatly</p>
-                    <div class="popup-sign-in__btns">
-                        <button class="popup-sign-in__google" type="button">G</button>
-                        <button class="popup-sign-in__apple" type="button">
-                            <img src="../src/assets/icons/apple-logo.svg" alt="apple-logo">
-                        </button>
-                    </div>
-                    <p class="popup-sign-in__or">OR</p>
-                    <input class="popup-sign-in__email" type="email" placeholder="Email">
-                    <input class="popup-sign-in__password" type="password" placeholder="Password">
-                    <a href="#" class="popup-sign-in__forget">Forget Password ?</a>
-                    <button class="popup-sign-in__inside">Sign in</button>
-                    <p class="popup-sign-in__create">Create A New Account?<a class="popup-sign-in__sign-up" href="#">Sign Up</a></p>
-                </form>
+                    <form action="../src/index.html">
+                        <p class="popup-sign-in__name">Sign In To eatly</p>
+                        <div class="popup-sign-in__btns">
+                            <button class="popup-sign-in__google" type="button">G</button>
+                            <button class="popup-sign-in__apple" type="button">
+                                <img src="../src/assets/icons/apple-logo.svg" alt="apple-logo">
+                            </button>
+                        </div>
+                        <p class="popup-sign-in__or">OR</p>
+                        <input class="popup-sign-in__email" type="email" placeholder="Email">
+                        <input class="popup-sign-in__password" type="password" placeholder="Password">
+                        <a href="#" class="popup-sign-in__forget">Forget Password ?</a>
+                        <button class="popup-sign-in__inside">Sign in</button>
+                        <p class="popup-sign-in__create">Create A New Account? <a class="popup-sign-in__sign-up" href="#">Sign Up</a></p>
+                    </form>
+                </div>
+                <div class="popup-sign-in__form-forget-pass">
+                    <form action="../src/index.html" method="get" target="_blank">
+                        <p class="popup-sign-in__name-forget-pass">Forget Password</p>
+                        <p class="popup-sign-in__descr">Enter Your Mail To Reset</p>
+                        <input class="popup-sign-in__email-forget-pass" type="email" placeholder="Email">
+                        <button class="popup-sign-in__inside-forget-pass">Verify</button>
+                    </form>
                 </div>
                 <div class="popup-sign-in__footer">
                     <p>Privacy Policy</p>
@@ -519,7 +527,52 @@
                     <h4>Find Foods With Love </h4>
                     <p>Eatly Is The Food Delivery Dashboard And Having More Than 2K+ Dishes Including Asian, Chinese, Italians And Many More. Our Dashboard Helps You To Manage Orders And Money.</p>
                     <div class="aside__btns">
+                        <button class="first"></button>
                         <button></button>
+                        <button></button>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <div id="popup-up" class="popup-sign-up">
+        <div class="popup-sign-up__content">
+            <div class="popup-sign-up__left-side">
+                <div class="popup-sign-up__img">
+                    <a href="#"><img src="../src/assets/icons/logo-eatly.svg" alt="logo-eatly"></a>
+                </div>
+                <div class="popup-sign-up__form">
+                    <form action="../src/index.html">
+                        <p class="popup-sign-up__name">Sign Up To eatly</p>
+                        <div class="popup-sign-up__btns">
+                            <button class="popup-sign-up__google" type="button">G</button>
+                            <button class="popup-sign-up__apple" type="button">
+                                <img src="../src/assets/icons/apple-logo.svg" alt="apple-logo">
+                            </button>
+                        </div>
+                        <p class="popup-sign-up__or">OR</p>
+                        <input class="popup-sign-up__user" type="text" placeholder="Full Name">
+                        <input class="popup-sign-up__email" type="email" placeholder="Email">
+                        <input class="popup-sign-up__password" type="password" placeholder="Password">
+                        <button class="popup-sign-in__inside">Sign up</button>
+                        <p class="popup-sign-up__login">Already Have An Account? <a class="popup-sign-in__sign-in" href="#">Log In</a></p>
+                    </form>
+                </div>
+                <div class="popup-sign-up__footer">
+                    <p>Privacy Policy</p>
+                    <p>Copyright 2022</p>
+                </div>
+            </div>
+            <aside>
+                <div class="aside__wrapper">
+                    <div class="aside__img">
+                        <img src="../src/assets/images/popup-aside.png" alt="popup-aside">
+                    </div>
+                    <h4>Find Foods With Love </h4>
+                    <p>Eatly Is The Food Delivery Dashboard And Having More Than 2K+ Dishes Including Asian, Chinese, Italians And Many More. Our Dashboard Helps You To Manage Orders And Money.</p>
+                    <div class="aside__btns">
+                        <button class="first"></button>
                         <button></button>
                         <button></button>
                     </div>

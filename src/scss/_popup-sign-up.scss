@@ -1,6 +1,6 @@
 @use 'vars';
 
-    .popup-sign-in{
+    .popup-sign-up{
         position: fixed;
         background-color: rgba(107, 94, 189, 0.719);
         top: 0;
@@ -13,18 +13,18 @@
         transition: .8s;
         min-height: 200vh;   
 
-        .popup-sign-in__content{
+        .popup-sign-up__content{
             width: 80%;
             background-color: #fff;
             position: relative;
             top: 0;
             left: 10%;            
             
-            .popup-sign-in__left-side{
+            .popup-sign-up__left-side{
                 padding: 32px 711px 48px 48px;
                 position: relative;
 
-                .popup-sign-in__img{
+                .popup-sign-up__img{
                     a{
                         img{
                             width: 53px;
@@ -32,7 +32,7 @@
                     }
                 }
 
-                .popup-sign-in__form{
+                .popup-sign-up__form{
                     margin: 141px 195px 117px 199px;
                     max-width: 388px;
                     opacity: 1;
@@ -41,7 +41,7 @@
                         
                     form{
                         
-                        .popup-sign-in__name{
+                        .popup-sign-up__name{
                             margin-bottom: 48px;
                             color: #323142;
                             font-family: vars.$font-primary;
@@ -52,12 +52,12 @@
                             text-align: center;
                         }
 
-                        .popup-sign-in__btns{
+                        .popup-sign-up__btns{
                             display: flex;
                             justify-content: space-between;
                             column-gap: 21px;
 
-                            .popup-sign-in__google{
+                            .popup-sign-up__google{
                                 border-radius: 13px;
                                 background: #F5F5F5;
                                 color: #323142;
@@ -71,7 +71,7 @@
                                 width: 183px;
                             }
 
-                            .popup-sign-in__apple{
+                            .popup-sign-up__apple{
                                 border-radius: 13px;
                                 background: #F5F5F5;
                                 border-style: none;
@@ -79,7 +79,7 @@
                             }
                         }
 
-                        .popup-sign-in__or{
+                        .popup-sign-up__or{
                             margin: 33px 0 39px;
                             color: rgba(50, 49, 66, 0.35);
                             font-family: vars.$font-primary;
@@ -89,7 +89,37 @@
                             text-align: center;
                         }
 
-                        .popup-sign-in__email{
+                        .popup-sign-up__user{
+                            width: 100%;
+                            background: url("../assets/icons/user-gray.svg") no-repeat 23px 26px;
+                            padding: 24px 23px 25px 79px;
+                            border-radius: 14px;
+                            background-color: #F5F5F5;
+                            border-style: none;
+                            color: #6C5FBC;
+                            font-family: vars.$font-primary;
+                            font-size: 17px;
+                            font-weight: 500;
+                            letter-spacing: 0.334px;
+
+
+                            &::placeholder{
+                                color: #C2C3CB;
+                                font-family: vars.$font-primary;
+                                font-size: 17px;
+                                font-weight: 600;
+                                letter-spacing: 1.167px;
+                                text-transform: uppercase;
+                            }
+
+                            &:focus{
+                                outline: 2px solid vars.$color-primary;
+                                background: url("../assets/icons/user-violet.svg") no-repeat 23px 26px;
+                                background-color: #fff;
+                            }
+                        }
+
+                        .popup-sign-up__email{
                             width: 100%;
                             background: url("../assets/icons/email-gray.svg") no-repeat 23px 26px;
                             padding: 24px 23px 25px 79px;
@@ -101,7 +131,7 @@
                             font-size: 17px;
                             font-weight: 500;
                             letter-spacing: 0.334px;
-                            text-transform: capitalize;
+
 
                             &::placeholder{
                                 color: #C2C3CB;
@@ -119,7 +149,7 @@
                             }
                         }
 
-                        .popup-sign-in__password{
+                        .popup-sign-up__password{
                             margin: 25px 0 12px;
                             width: 100%;
                             background: url("../assets/icons/lock-gray.svg") no-repeat 23px 20px, url("../assets/icons/eye-gray.svg") no-repeat 330px 24px;
@@ -132,7 +162,6 @@
                             font-size: 17px;
                             font-weight: 500;
                             letter-spacing: 0.334px;
-                            text-transform: capitalize;
 
                             &::placeholder{
                                 color: #C2C3CB;
@@ -151,24 +180,7 @@
 
                         }
 
-                        .popup-sign-in__forget{
-                            display: block;
-                            text-align: right;
-                            color: rgba(105, 93, 187, 0.7);
-                            font-family: vars.$font-primary;
-                            font-size: 16px;
-                            font-weight: 400;
-                            
-                            .popup-sign-in__sign-up{
-                                color: vars.$color-primary;
-                                font-family: vars.$font-primary;
-                                font-size: 19px;
-                                font-weight: 700;
-                                letter-spacing: 0.189px;
-                            }
-                        }
-
-                        .popup-sign-in__inside{
+                        .popup-sign-up__inside{
                             margin: 20px 0 23px;
                             padding: 24px 100px;
                             width: 100%;
@@ -183,7 +195,7 @@
                             text-transform: uppercase;
                         }
 
-                        .popup-sign-in__create{
+                        .popup-sign-up__login{
                             color: #3E3E3E;
                             font-family: vars.$font-primary;
                             font-size: 19px;
@@ -194,98 +206,9 @@
                     }
                 }
 
-                .popup-sign-in__form-forget-pass{
-                    margin: 201px 191px 297px 198px;
-                    max-width: 388px;
-                    opacity: 0;
-                    visibility: hidden;
-                    transition: .8s;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-
-
-                    .popup-sign-in__name-forget-pass{
-                        margin-bottom: 25px;
-                        color: #323142;
-                        font-family: vars.$font-primary;
-                        font-size: 35px;
-                        font-weight: 600;
-                        line-height: 44px;
-                        letter-spacing: -1.41px;
-                        text-align: center;
-                    }
-
-                    .popup-sign-in__descr{
-                        color: #CFCFD3;
-                        font-family: vars.$font-primary;
-                        font-size: 23px;
-                        font-weight: 500;
-                        line-height: 28px;
-                        text-align: center;
-                    }
-
-                    .popup-sign-in__email-forget-pass{
-                        width: 100%;
-                        background: url("../assets/icons/email-gray.svg") no-repeat 23px 26px;
-                        padding: 24px 23px 25px 79px;
-                        border-radius: 14px;
-                        background-color: #F5F5F5;
-                        border-style: none;
-                        color: #6C5FBC;
-                        font-family: vars.$font-primary;
-                        font-size: 17px;
-                        font-weight: 500;
-                        letter-spacing: 0.334px;
-                        text-transform: capitalize;
-                        margin: 90px 0 35px;
-
-                        &::placeholder{
-                            color: #C2C3CB;
-                            font-family: vars.$font-primary;
-                            font-size: 17px;
-                            font-weight: 600;
-                            letter-spacing: 1.167px;
-                            text-transform: uppercase;
-                        }
-
-                        &:focus{
-                            outline: 2px solid vars.$color-primary;
-                            background: url("../assets/icons/email-violet.svg") no-repeat 23px 26px;
-                            background-color: #fff;
-                        }
-                    }
-
-                    .popup-sign-in__inside-forget-pass{
-                        padding: 24px 100px;
-                        width: 100%;
-                        border-radius: 16px;
-                        border-style: none;
-                        background: vars.$color-primary;
-                        color: #F3F5F6;
-                        font-family: vars.$font-primary;
-                        font-size: 18px;
-                        font-weight: 600;
-                        letter-spacing: 0.534px;
-                        text-transform: uppercase;
-                    }
-                }
-
-                .popup-sign-in__footer{
+                .popup-sign-up__footer{
                     display: flex;
                     justify-content: space-between;
-                }
-
-                .popup-sign-in__form.hidden{
-                    transition: .8s;
-                    opacity: 0;
-                    visibility: hidden;
-                }
-
-                .popup-sign-in__form-forget-pass.active{
-                    opacity: 1;
-                    visibility: visible;
-                    transition: .8s;
                 }
             }
 
@@ -359,7 +282,7 @@
         }
     }
 
-    .popup-sign-in.active{
+    .popup-sign-up.active{
         opacity: 1;
         visibility: visible;
         transition: .8s;

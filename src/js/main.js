@@ -1,4 +1,8 @@
-import { popupLogin, focusEmail, focusPassword } from "./modules/popup-sign-in";
+import { popupLogin, changePass, submitSignIn} from "./modules/popup-sign-in";
 popupLogin();
-focusEmail();
-focusPassword();
+changePass();
+submitSignIn();
+
+
+import { popupSignUp } from "./modules/popup-sign-up";
+popupSignUp();
