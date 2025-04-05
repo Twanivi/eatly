@@ -23,11 +23,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./src/scss/main.scss">
     <link rel="stylesheet" href="./src/css/distyle.css">
     <link rel="stylesheet" href="./src/css/main.css">
     
-    <script src="./src/js/main.js" defer></script>
+    <script type="module" src="./src/js/main.js" defer></script>
 </head>
 <body>
     <header>
@@ -49,8 +48,8 @@
                 </div>
             </div>
             <div class="header-buttons">
-                <button class="header-login">Login</button>
-                <button class="header-sign-up">Sign up</button>
+                <button id="header-login">Login</button>
+                <button id="header-sign-up">Sign up</button>
             </div>
         </div>
     </header>
@@ -494,21 +493,49 @@
                     <a href="#"><img src="./src/assets/icons/logo-eatly.svg" alt="logo-eatly"></a>
                 </div>
                 <div class="popup-sign-in__form">
-                    <form action="./index.html">
-                        <p class="popup-sign-in__name">Sign In To eatly</p>
-                        <div class="popup-sign-in__btns">
-                            <button class="popup-sign-in__google" type="button">G</button>
-                            <button class="popup-sign-in__apple" type="button">
-                                <img src="./src/assets/icons/apple-logo.svg" alt="apple-logo">
-                            </button>
+                    <form>
+                        <div class="form-element">
+                            <p class="popup-sign-in__name">Sign In To eatly</p>
                         </div>
-                        <p class="popup-sign-in__or">OR</p>
-                        <input class="popup-sign-in__email" type="email" placeholder="Email">
-                        <input class="popup-sign-in__password" type="password" placeholder="Password">
-                        <a href="#" class="popup-sign-in__forget">Forget Password ?</a>
-                        <button class="popup-sign-in__inside">Sign in</button>
-                        <p class="popup-sign-in__create">Create A New Account? <a class="popup-sign-in__sign-up" href="#">Sign Up</a></p>
+                        <div class="popup-sign-in__btns form-element">
+                            <div class="popup-sign-in__google">
+                                <button type="button">G</button>
+                            </div>
+                            <div class="popup-sign-in__apple">
+                                <button type="button">
+                                    <img src="./src/assets/icons/apple-logo.svg" alt="apple-logo">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="form-element">
+                            <p class="popup-sign-in__or">OR</p>
+                        </div>
+                        <div class="form-element">
+                            <label>
+                                <input class="popup-sign-in__email" type="email" placeholder="Email">
+                            </label>
+                            <div class="error"></div>
+                        </div>
+                        <div class="password-wrapper form-element">
+                            <label>
+                                <input class="popup-sign-in__password" type="password" placeholder="Password" data-visible="false">
+                            </label>
+                            <div class="error"></div>
+                        </div>
+                        <div class="form-element">
+                            <a href="#" id="popup-sign-in__forget">Forget Password?</a>
+                        </div>
+                        <div class="form-element">
+                            <button class="popup-sign-in__inside">Sign in</button>
+                        </div>
+                        <div class="form-element">
+                            <p class="popup-sign-in__create">Create A New Account? <a class="popup-sign-in__sign-up" href="#">Sign Up</a></p>
+                        </div>
                     </form>
+                </div>
+                <div class="popup-sign-in__footer">
+                    <p>Privacy Policy</p>
+                    <p>Copyright 2022</p>
                 </div>
             </div>
             <aside>
@@ -535,11 +562,22 @@
                     <a href="#"><img src="./src/assets/icons/logo-eatly.svg" alt="logo-eatly"></a>
                 </div>
                 <div class="popup-change__form">
-                    <form action="./index.html">
-                        <p class="popup-change__name">Forget Password</p>
-                        <p class="popup-change__descr">Enter Your Mail To Reset</p>
-                        <input class="popup-change__email" type="email" placeholder="Email">
-                        <button class="popup-change__inside">Verify</button>
+                    <form >
+                        <div class="form-element">
+                            <p class="popup-change__name">Forget Password</p>
+                        </div>
+                        <div class="form-element">
+                            <p class="popup-change__descr">Enter Your Mail To Reset</p>
+                        </div>
+                        <div class="form-element">
+                            <label>
+                                <input class="popup-change__email" type="email" placeholder="Email">
+                            </label>
+                            <div class="error"></div>
+                        </div>
+                        <div class="form-element">
+                            <button class="popup-change__inside">Verify</button>
+                        </div>
                     </form>
                 </div>
                 <div class="popup-change__footer">
@@ -571,20 +609,47 @@
                     <a href="#"><img src="./src/assets/icons/logo-eatly.svg" alt="logo-eatly"></a>
                 </div>
                 <div class="popup-sign-up__form">
-                    <form action="./index.html">
-                        <p class="popup-sign-up__name">Sign Up To eatly</p>
-                        <div class="popup-sign-up__btns">
-                            <button class="popup-sign-up__google" type="button">G</button>
-                            <button class="popup-sign-up__apple" type="button">
-                                <img src="./src/assets/icons/apple-logo.svg" alt="apple-logo">
-                            </button>
+                    <form>
+                        <div class="form-element">
+                            <p class="popup-sign-up__name">Sign Up To eatly</p>
                         </div>
-                        <p class="popup-sign-up__or">OR</p>
-                        <input class="popup-sign-up__user" type="text" placeholder="Full Name">
-                        <input class="popup-sign-up__email" type="email" placeholder="Email">
-                        <input class="popup-sign-up__password" type="password" placeholder="Password">
-                        <button class="popup-sign-up__inside">Sign up</button>
-                        <p class="popup-sign-up__login">Already Have An Account? <a class="popup-sign-in__sign-in" href="#">Log In</a></p>
+                        <div class="popup-sign-up__btns form-element">
+                            <div class="popup-sign-up__google">
+                                <button type="button">G</button>
+                            </div>
+                            <div class="popup-sign-up__apple">
+                                <button type="button">
+                                    <img src="./src/assets/icons/apple-logo.svg" alt="apple-logo">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="form-element">
+                            <p class="popup-sign-up__or">OR</p>
+                        </div>
+                        <div class="form-element">
+                            <label>
+                                <input class="popup-sign-up__user" type="text" placeholder="Full Name">
+                            </label>
+                            <div class="error"></div>
+                        </div>
+                        <div class="form-element">
+                            <label>
+                                <input class="popup-sign-up__email" type="email" placeholder="Email">
+                            </label>
+                            <div class="error"></div>
+                        </div>
+                        <div class="password-wrapper form-element">
+                            <label>
+                                <input class="popup-sign-up__password" type="password" placeholder="Password">
+                            </label>
+                            <div class="error"></div>
+                        </div>
+                        <div class="form-element">
+                            <button class="popup-sign-up__inside">Sign up</button>
+                        </div>
+                        <div class="form-element">
+                            <p class="popup-sign-up__login">Already Have An Account? <a class="popup-sign-up__sign-in" href="#">Log In</a></p>
+                        </div> 
                     </form>
                 </div>
                 <div class="popup-sign-up__footer">
